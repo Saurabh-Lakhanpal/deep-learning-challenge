@@ -68,6 +68,3 @@ Despite focused optimization efforts, achieving the desired accuracy may require
 - Optimized model with adjustments (`AlphabetSoupCharity_Optimization.h5`).
 - Comprehensive performance report outlining methodologies, findings, and recommendations.
 
-## Conclusion
-This project demonstrates the potential of deep learning in driving data-driven decisions for nonprofit organizations like Alphabet Soup. By systematically analyzing and optimizing the dataset and model, the solution aims to empower Alphabet Soup in making impactful funding decisions.
-
