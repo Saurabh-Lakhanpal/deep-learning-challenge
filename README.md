@@ -5,6 +5,54 @@ Alphabet Soup, a nonprofit foundation, is on a mission to maximize the impact of
 
 This initiative combines the analytical rigor of data preprocessing, the computational power of neural networks, and the creativity of optimization to deliver actionable insights for Alphabet Soup.
 
+## Results
+- [Final code]()
+
+### Data Preprocessing
+
+- Target Variable: The target variable is IS_SUCCESSFUL, which is labeled 1 for organizations that successfully used their funding, and 0 otherwise.
+- Feature Variables: All other variables—after dropping irrelevant columns and encoding categorical variables—were used as features to train the model. These included application type, classification, income amount, and more.
+- Removed Variables: The EIN and NAME columns were removed because they serve only as identifiers and do not contribute predictive value.
+
+### Compiling, Training, and Evaluating the Model
+
+- Neural Network Architecture
+    - Input layer: 100 neurons
+    - Hidden layers: 30 and 10 neurons with ReLU and sigmoid activations
+    - Output layer: 1 neuron with sigmoid activation
+This structure was selected to balance complexity and performance, while minimizing overfitting.
+
+- Model Performance
+
+    - Training Accuracy (Final Epoch): 80.86%
+    - Test Accuracy: 78.52%
+    - Test Loss: 0.45
+    The model came close to the 80% target and maintained consistent performance between training and test datasets.
+
+- Optimization Attempts
+
+    - Removed additional non-contributing columns: AFFILIATION, SPECIAL_CONSIDERATIONS, USE_CASE, ORGANIZATION
+    - Filtered for common application types and classifications
+    - Experimented with different activation functions (e.g., tanh)
+    - Adjusted neuron count and network depth
+    - Tuned learning rate, batch size, and number of epochs
+These adjustments helped fine-tune the model to achieve higher generalization accuracy.
+
+### Summary and Recommendation
+After multiple iterations, the deep learning model achieved a strong 79.42% accuracy on unseen test data. This suggests that the model is fairly effective at identifying organizations likely to use funds successfully.
+
+### Alternative Model Suggestion
+A Random Forest Classifier previously tested in the project produced an accuracy of approximately 76.6%, which was slightly lower than the neural network. However, it requires less tuning and can be more interpretable for decision-making.
+
+Why Consider Random Forest?
+- Performs well with mixed-type tabular data
+- Robust to noise and outliers
+- Easier to interpret using feature importance metrics
+- Faster to train and less sensitive to parameter tuning
+- For quick iteration or deployment in a low-resource environment, Random Forest could be a strong backup.
+
+---
+
 ## Project Goals
 The primary objective is to develop and refine a deep learning model that accurately predicts whether an organization funded by Alphabet Soup will succeed. To achieve this, the project emphasizes:
 - Data preprocessing to prepare and transform the dataset for machine learning.
@@ -47,24 +95,3 @@ To surpass the 75% accuracy target, various strategies are explored, including:
 - Testing alternative activation functions and varying the number of training epochs.
 
 Multiple iterations of these adjustments are conducted, and results are saved for comparison and analysis.
-
-## Results
-### Data Preprocessing
-- Target Variable: **IS_SUCCESSFUL**
-- Features: All other columns except **EIN** and **NAME**
-- Irrelevant Columns Dropped: **EIN**, **NAME**
-
-### Model Performance
-- Initial Model Accuracy: Achieved during baseline training.
-- Optimized Model Accuracy: Results after implementing optimization strategies.
-- Detailed performance metrics are visualized through accuracy and loss plots.
-
-### Insights and Recommendations
-Despite focused optimization efforts, achieving the desired accuracy may require alternative approaches. For example, implementing ensemble methods or gradient boosting algorithms like XGBoost may provide enhanced performance for this classification problem.
-
-## Deliverables
-- Preprocessed dataset and exploration notebook.
-- Baseline deep learning model (`AlphabetSoupCharity.h5`).
-- Optimized model with adjustments (`AlphabetSoupCharity_Optimization.h5`).
-- Comprehensive performance report outlining methodologies, findings, and recommendations.
-
