@@ -6,7 +6,7 @@ Alphabet Soup, a nonprofit foundation, is on a mission to maximize the impact of
 This initiative combines the analytical rigor of data preprocessing, the computational power of neural networks, and the creativity of optimization to deliver actionable insights for Alphabet Soup.
 
 ## Results
-- [Final code]()
+- [Final code](https://github.com/Saurabh-Lakhanpal/deep-learning-challenge/blob/main/Deep_Learning_Challenge_optimized.ipynb)
 
 ### Data Preprocessing
 
